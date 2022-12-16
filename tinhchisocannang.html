@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1> TÍNH CHỈ SỐ CÂN NẶNG </h1>
+<label> Nhập cân nặng(kg)</label>
+<input type="number" id="cannang">
+<br>
+<br>
+<label> Nhập chiều cao(m)</label>
+<input type="number" id="chieucao">
+<br>
+<br>
+<button onclick="ketqua()"> Kiểm tra</button>
+<p id="demo"></p>
+
+<script>
+    function ketqua() {
+        let a = +document.getElementById("cannang").value;
+        let b = +document.getElementById("chieucao").value;
+        let BMI;
+        BMI = a /(b**2) ;
+        if (BMI < 18) {
+            document.getElementById("demo").innerHTML=BMI + "Underweight";
+        } else if (BMI < 25.0) {
+            document.getElementById("demo").innerHTML=BMI + "Normal";
+        } else if (BMI < 30.0) {
+            document.getElementById("demo").innerHTML=BMI + "Overweight";
+        } else {
+            document.getElementById("demo").innerHTML=BMI + "Obese";
+        }
+    }
+
+</script>
+</body>
+</html>

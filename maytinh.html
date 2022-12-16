@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Calculator</title>
+</head>
+<body>
+<h1><b>Calculator</b></h1>
+<input id="soa" type="number" placeholder="Nhập vào số thứ nhất">
+<input id="sob" type="number" placeholder="Nhập vào số thứ hai">
+<br><br>
+<button id="nutcong" onclick="cong()">Cộng(+)</button>
+<button id="nuttru" onclick="hieu()">Trừ(-)</button>
+<button id="nutnhan" onclick="nhan()">Nhân(X)</button>
+<button id="nutchia" onclick="chia()">Chia(/)</button>
+<h3><b>Result :</b></h3>
+<p id="Result">Đây là kết quả</p>
+</body>
+<script>
+
+  function cong(){
+    let One = document.getElementById('soa').value;
+    let Two = document.getElementById('sob').value;
+    let Result = Number(One)+Number(Two);
+    document.getElementById('Result').innerHTML=Result;
+  }
+  function hieu(){
+    let One = document.getElementById('soa').value;
+    let Two = document.getElementById('sob').value;
+    let Result = Number(One)-Number(Two);
+    document.getElementById('Result').innerHTML=Result;
+  }
+  function nhan(){
+    let One = document.getElementById('soa').value;
+    let Two = document.getElementById('sob').value;
+    let Result = Number(One)*Number(Two);
+    document.getElementById('Result').innerHTML=Result;
+  }
+  function chia(){
+    let One = document.getElementById('soa').value;
+    let Two = document.getElementById('sob').value;
+    let Result = Number(One)/Number(Two);
+    document.getElementById('Result').innerHTML=Result;
+  }
+</script>
+</html>
